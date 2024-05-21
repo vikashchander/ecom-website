@@ -9,7 +9,7 @@ export default function Carousel() {
       {data.herosection.map(({externalUrl, imageUrl}) => {
         return (
           <MDBCarouselItem itemId = {imageUrl} interval={1000}>
-            <a id ={imageUrl} href="https://google.com" target="_blank">
+            <a key={imageUrl} href="https://google.com" target="_blank">
               <img src={imageUrl} className='d-block w-100' alt='...' />
             </a>
           </MDBCarouselItem>
