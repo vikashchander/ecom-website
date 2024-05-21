@@ -5,6 +5,7 @@ import {
   MDBNavbar,
   MDBNavbarBrand
 } from 'mdb-react-ui-kit';
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
@@ -12,7 +13,7 @@ export default function Navbar() {
       <MDBNavbar sticky light bgColor='light'>
         <MDBContainer fluid>
           <MDBNavbarBrand href='#'>
-            <img
+            <Image
               src='https://cdn.vectorstock.com/i/1000v/97/10/gold-jewelry-vector-5909710.avif'
               height='50'
               alt='jewellery'

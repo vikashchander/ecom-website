@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 
 export default function Category({classList, thumb_src, collection, title, cta}) {
     const classBody = ((cta != null) ? "align-items-end d-flex" : "text-center w-100 pt-8" );
@@ -6,7 +7,7 @@ export default function Category({classList, thumb_src, collection, title, cta})
     <a href="#">
         <div className={`card card-background align-items-start mb-4 mb-lg-0 ${classList}`} key={thumb_src}>
           <div className="full-background" style={{backgroundSize: 'cover'}}>
-          <img src={thumb_src} style={{ backgroundPosition: "50%",
+          <Image src={thumb_src} style={{ backgroundPosition: "50%",
             backgroundSize: "cover",
             marginBottom: "30px",
             width: "100%",
