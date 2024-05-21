@@ -8,7 +8,7 @@ export default function Carousel() {
     <MDBCarousel className='mt-3' showControls interval={3000}>
       {data.herosection.map(({externalUrl, imageUrl}) => {
         return (
-          <MDBCarouselItem key={imageUrl} itemId = {imageUrl} interval={1000}>
+          <MDBCarouselItem key={imageUrl} interval={1000}>
             <a key={imageUrl} href="https://google.com" target="_blank">
               <Image key={imageUrl} src={imageUrl} className='d-block w-100' alt='...' />
             </a>

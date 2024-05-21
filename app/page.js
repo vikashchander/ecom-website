@@ -18,7 +18,7 @@ export default function Home() {
         </div>
         <div class="row mt-5 mb-3">
         {data.categories.slice(0, 4).map(category => 
-          <div class="col-md-6 col-lg-3">
+          <div class="col-md-6 col-lg-3" key = {category.thumb_src}>
             <CardCategory
               thumb_src = {category.thumb_src}
               title = {category.title}
@@ -33,8 +33,8 @@ export default function Home() {
         </div>
       <div class="row">
         {data.products.map(product => 
-          <div class="col-md-6 col-lg-3 mb-3">
-            <CardProduct 
+          <div class="col-md-6 col-lg-3 mb-3"  key={product.thumb_src} >
+            <CardProduct
               thumb_src = {product.thumb_src}
               thumb_alt = {product.thumb_alt}
               title = {product.title}
