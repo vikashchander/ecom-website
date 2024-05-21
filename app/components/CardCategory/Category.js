@@ -4,7 +4,7 @@ export default function Category({classList, thumb_src, collection, title, cta})
     const classBody = ((cta != null) ? "align-items-end d-flex" : "text-center w-100 pt-8" );
   return (
     <a href="#">
-        <div className={`card card-background align-items-start mb-4 mb-lg-0 ${classList}`}>
+        <div className={`card card-background align-items-start mb-4 mb-lg-0 ${classList}`} id={thumb_src}>
           <div className="full-background" style={{backgroundSize: 'cover'}}>
           <img src={thumb_src} style={{ backgroundPosition: "50%",
             backgroundSize: "cover",

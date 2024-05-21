@@ -5,7 +5,7 @@ export default function Products({title, description, thumb_src}) {
     
     <a href="#">
         <div className="container mt-5">
-        <div className="card">
+        <div className="card" id ={thumb_src} >
             <img src={thumb_src} className="card-img-top" alt="Image" />
             <div className="card-body">
             <h5 className="card-title">{title}</h5>
