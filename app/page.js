@@ -1,95 +1,51 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+import data from '../public/data.json';
+import Navbar from "./components/Navbar/Navbar";
+import Footer from './components/Footer/Footer'
+import Carousel from "./components/Carousel/Carousel";
+import CardCategory from "./components/CardCategory/Category";
+import CardProduct from './components/Products/products';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+    <Navbar/>
+    <Carousel className="mb-4"/>
+    <div class="container mt-5">
+        <div class="d-block text-center mb-5">
+          <h3>Shop by category</h3>
+          <a class="text-dark font-weight-bold" href="#">Browse all categories &#62;</a>
         </div>
+        <div class="row mt-5 mb-3">
+        {data.categories.slice(0, 4).map(category => 
+          <div class="col-md-6 col-lg-3">
+            <CardCategory
+              thumb_src = {category.thumb_src}
+              title = {category.title}
+              collection = {category.collection}
+            />
+          </div>
+        )}
+        </div>
+        <div class="d-block text-center mb-5">
+          <h3>Products</h3>
+          <a class="text-dark font-weight-bold" href="#">Browse all products &#62;</a>
+        </div>
+      <div class="row">
+        {data.products.map(product => 
+          <div class="col-md-6 col-lg-3 mb-3">
+            <CardProduct 
+              thumb_src = {product.thumb_src}
+              thumb_alt = {product.thumb_alt}
+              title = {product.title}
+              description = {product.description}
+              position = "left"
+            />
+          </div>
+        )}        
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    <Footer/>
     </main>
   );
 }
