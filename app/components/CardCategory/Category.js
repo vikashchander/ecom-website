@@ -13,7 +13,8 @@ export default function Category({classList, thumb_src, collection, title, cta})
             width: "100%",
             height: "100%",
             position: "absolute",
-            borderRadius: ".375rem"}} className="card-img-top" alt={title} />
+            borderRadius: ".375rem"}}  layout="fill"
+            objectFit="cover" className="card-img-top" alt={title} />
           </div>
           <div className={`card-body ${classBody}`} style={{color: "#fff", position: "relative", zIndex: "2", height: "20rem"}}>
             <div className="d-block h-200" style={{marginTop: "12rem"}}>

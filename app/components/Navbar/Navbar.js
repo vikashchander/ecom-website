@@ -17,6 +17,7 @@ export default function Navbar() {
               src='https://cdn.vectorstock.com/i/1000v/97/10/gold-jewelry-vector-5909710.avif'
               height='50'
               alt='jewellery'
+              width={70}
               loading='lazy'
             />
             <h6>Khatri Jewellers</h6>

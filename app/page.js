@@ -11,14 +11,14 @@ export default function Home() {
     <main>
     <Navbar/>
     <Carousel className="mb-4"/>
-    <div class="container mt-5">
-        <div class="d-block text-center mb-5">
+    <div className="container mt-5">
+        <div className="d-block text-center mb-5">
           <h3>Shop by category</h3>
-          <a class="text-dark font-weight-bold" href="#">Browse all categories &#62;</a>
+          <a className="text-dark font-weight-bold" href="#">Browse all categories &#62;</a>
         </div>
-        <div class="row mt-5 mb-3">
+        <div className="row mt-5 mb-3">
         {data.categories.slice(0, 4).map(category => 
-          <div class="col-md-6 col-lg-3" key = {category.thumb_src}>
+          <div className="col-md-6 col-lg-3" key = {category.thumb_src}>
             <CardCategory
               thumb_src = {category.thumb_src}
               title = {category.title}
@@ -27,13 +27,13 @@ export default function Home() {
           </div>
         )}
         </div>
-        <div class="d-block text-center mb-5">
+        <div className="d-block text-center mb-5">
           <h3>Products</h3>
-          <a class="text-dark font-weight-bold" href="#">Browse all products &#62;</a>
+          <a className="text-dark font-weight-bold" href="#">Browse all products &#62;</a>
         </div>
-      <div class="row">
+      <div className="row">
         {data.products.map(product => 
-          <div class="col-md-6 col-lg-3 mb-3"  key={product.thumb_src} >
+          <div className="col-md-6 col-lg-3 mb-3"  key={product.thumb_src} >
             <CardProduct
               thumb_src = {product.thumb_src}
               thumb_alt = {product.thumb_alt}
