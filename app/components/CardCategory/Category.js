@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Category({classList, thumb_src, collection, title, cta}) {
     const classBody = ((cta != null) ? "align-items-end d-flex" : "text-center w-100 pt-8" );
   return (
-    <a href="#">
+    <a href="/product/lists">
         <div className={`card card-background align-items-start mb-4 mb-lg-0 ${classList}`} key={thumb_src}>
           <div className="full-background" style={{backgroundSize: 'cover'}}>
           <Image src={thumb_src} style={{ backgroundPosition: "50%",
@@ -21,7 +21,7 @@ export default function Category({classList, thumb_src, collection, title, cta})
               <p className="text-white font-weight-bold mb-1">{collection}</p>
               <h4 className="text-white font-weight-bolder">{title}</h4>
               {/* {(cta != null) &&  */}
-                <a href="#" className="text-white text-sm font-weight-semibold mb-0">See products &#62;</a>  
+                <a href="/product/lists" className="text-white text-sm font-weight-semibold mb-0">See products &#62;</a>  
               {/* } */}
             </div>
           </div>

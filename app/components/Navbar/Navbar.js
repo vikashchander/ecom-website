@@ -12,7 +12,7 @@ export default function Navbar() {
     <>
       <MDBNavbar sticky light bgColor='light'>
         <MDBContainer fluid>
-          <MDBNavbarBrand href='#'>
+          <MDBNavbarBrand href='/'>
             <Image
               src='https://cdn.vectorstock.com/i/1000v/97/10/gold-jewelry-vector-5909710.avif'
               height='50'
